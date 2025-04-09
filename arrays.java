@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class arrays {
 
     static void insert(int[] v){
+        System.out.println("insert in a array");
         Scanner in = new Scanner(System.in);
         for(int i=0; i<v.length ; i++){
              v[i]=in.nextInt();
@@ -14,10 +15,18 @@ public class arrays {
         for(int num: v){
             System.out.print(num + " ");
         }
-        System.out.println("\nWith way 2 : \n"+Arrays.toString(v));
+        System.out.println("\nWith way 2 (toString): \n"+Arrays.toString(v));
+    }
+
+    static void swap(int[] v, int i, int j){
+        int temp = v[i];
+        v[i]=v[j];
+        v[j]=temp;
     }
 
     static void dInsert(int[][] v){
+        System.out.println("insert for 2d integer array");
+
         Scanner in = new Scanner(System.in);
         int element=0;
         for(int i=0; i<v.length; i++){
@@ -41,6 +50,8 @@ public class arrays {
     }
 
     static void userD(String[][] s){
+        System.out.println("\n Enter String Array");
+
         Scanner in = new Scanner(System.in);
         for(int i=0; i<s.length; i++){
             for(int j=0; j<s[i].length; j++){
@@ -67,18 +78,23 @@ public class arrays {
         Scanner in = new Scanner(System.in);
         int n=in.nextInt();
         int[] arr = new int[n];
-        // insert(arr);
-        // print(arr);
+        insert(arr);
+        print(arr);
+System.out.println("\n..............................2D Array................................................");
+
+        System.out.println("swaping an array");
+        swap(arr,1,3);
+        print(arr);
+
+
 System.out.println("\n..............................2D Array................................................");
 
         int[][] arr2 = new int[3][3];
-        // dInsert(arr2);
-        // dPrint(arr2);
-
+        dInsert(arr2);
+        dPrint(arr2);
         String[][] arr3 = new String[2][2];
         userD(arr3);
         userP(arr3);
-
     }
     
 }
