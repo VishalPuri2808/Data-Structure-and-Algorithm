@@ -46,6 +46,14 @@ public class arrays {
             else{System.out.println("Not found!");}
         }   
     }
+    static int maxElement(int[] v){
+        int max=v[0];
+        if(v.length==0){return -1;}
+        for(int num: v){
+            if(num>max){max=num;}    
+        }
+        return max;
+    }
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -54,6 +62,7 @@ public class arrays {
         int[] arr =new int[s];
         Acreate(arr, s);
         Aprint(arr);
+        System.out.println("Max element is:"+maxElement(arr));
         System.out.print("Enter the indexes to swap:");
         int i1=in.nextInt();
         int i2=in.nextInt();
