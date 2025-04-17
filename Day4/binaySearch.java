@@ -15,7 +15,10 @@ public class binaySearch {
     }
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        int[] arr = {1,3,4,5,12,13,19,20};
+        int[] arr = new int[10];
+        for(int i=0; i<10;i++){
+            arr[i]=in.nextInt();
+        }
         int target=in.nextInt();
         System.out.println(search(arr, target));
     }
